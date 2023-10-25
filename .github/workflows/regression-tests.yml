@@ -1,0 +1,23 @@
+name: 'Workflow To Run Regression Tests'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs: 
+  trigger_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Nayya-com/action-workflow-queue@main
+        name: Check if other jobs are running
+        with:
+          timeout:
+            3600
+          delay:
+            20
+      - name: Regression Tests
+        shell: bash
+        run: |
+          echo "Running regression tests"
+          sleep 300s
