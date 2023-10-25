@@ -13,9 +13,9 @@ jobs:
         name: Check if other jobs are running
         with:
           timeout:
-            3600
+            3600000
           delay:
-            20
+            20000
       - name: Regression Tests
         shell: bash
         run: |
