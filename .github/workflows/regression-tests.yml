@@ -9,7 +9,7 @@ jobs:
   trigger_workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: Nayya-com/action-workflow-queue@main
+      - uses: husnain581/action-workflow-queue
         name: Check if other jobs are running
         with:
           timeout:
